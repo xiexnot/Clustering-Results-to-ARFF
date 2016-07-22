@@ -56,3 +56,55 @@ def read_feature(filename):
 		feature[i] = feature[i].split("\t")
 		feature[i][0] = int(feature[i][0])
 	return feature
+
+def read_dataset(File_Name, Split_Symbol):
+	f = open(File_Name,'rU')
+	data = f.read()
+	data = data.split('\n')
+	line = data.__len__()
+	if line != 1:
+		while len(data[data.__len__()-1]) == 0:
+			data = data[:-1]
+			line -= 1
+	for i in range(len(data)):
+		data[i] = data[i].split(Split_Symbol)
+		if data[i][len(data[i])-1] == '':
+			data[i] = data[i][:-1]
+	print "data[0]=",data[0]
+	f.close()
+	return data
+
+def Convert2FloatArray(d, array):
+	print "start to convert to float"
+	if array == 1:
+		for i in range(len(d)):
+			if 'on' in d[i]:
+				d[i] = 1
+			elif 'off' in d[i]:
+				d[i] = 0
+			elif 'stand' in d[i]:
+				d[i] = 0.1
+		d = [float(i) for i in d]
+		
+	if array == 2:
+		for i in range(len(d)):
+			#if d[i][len(d[i])-1] == '\r':
+			#	d[i] = d[i][:-1]
+			for j in range(len(d[i])):
+				if 'on' in d[i][j]:
+					d[i][j] = 1
+				elif 'off' in d[i][j]:
+					d[i][j] = 0
+				elif 'stand' in d[i][j]:
+					d[i][j] = 0.1
+		for i in range(d.__len__()):
+			for j in range(len(d[i])):
+				try:
+					d[i][j] = float(d[i][j])
+				except:
+					pass
+					print i," ",j
+		d = [[float(j) for j in i] for i in d]
+		
+	print 'start to convert to float...done...'
+	return d

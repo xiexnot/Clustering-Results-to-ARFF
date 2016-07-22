@@ -1,6 +1,6 @@
 {
 	"dataset_filename":"dataset/BL313/s_dataset",
-	"label_fielname":"dataset/BL313/s_dataset_label(manual)",
+	"label_filename":"dataset/BL313/s_dataset_label(manual)",
 	"feature_filename":"dataset/BL313/s_dataset_feature",
 	"ARFF_filename":"BL313.arff"
 }

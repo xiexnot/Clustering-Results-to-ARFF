@@ -1,5 +1,5 @@
-1	S60_Light
-3	S65_Light
-10	S60_Light
-11	S65_Light
-25	S55_Light
+2	S60_Light:9*
+4	S65_Light:11*
+11	S60_Light:22*
+12	S65_Light:23*
+26	S55_Light:41*
