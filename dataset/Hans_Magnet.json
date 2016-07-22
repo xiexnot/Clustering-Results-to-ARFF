@@ -1,0 +1,6 @@
+{
+	"dataset_filename":"dataset/Hans/s_dataset(Magnet)",
+	"label_fielname":"dataset/Hans/label_0901_0907",
+	"feature_filename":"dataset/Hans/s_dataset_feature(Magnet)",
+	"ARFF_filename":"Hans_Magnet.arff"
+}

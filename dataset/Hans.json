@@ -1,0 +1,6 @@
+{
+	"dataset_filename":"dataset/Hans/s_dataset_0901_0907",
+	"label_fielname":"dataset/Hans/label_0901_0907",
+	"feature_filename":"dataset/Hans/s_dataset_feature",
+	"ARFF_filename":"Hans.arff"
+}

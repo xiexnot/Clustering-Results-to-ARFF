@@ -43,7 +43,7 @@ else:
 state = []
 for i in range(len(feature)):
 	state.append("REAL")
-	if "people" in feature[i][1] or "audio" in feature[i][1]:
+	if "people" in feature[i][1] or "audio" in feature[i][1] or 'light' in feature[i][1] or 'WallBtn' in feature[i][1] or 'Magnet' in feature[i][1] or 'PIR' in feature[i][1]:
 		state[i] = "INT"
 	FILE.write("@ATTRIBUTE "+str(feature[i][1])+state+"\n")
 
@@ -62,7 +62,7 @@ for i in range(instance.__len__()):
 		if state[j] == "REAL":
 			FILE.write(str(round(instance[i][j],1))+",")
 		else:
-			FILE.write(str(instance[i][j])+",")
+			FILE.write(str(int(instance[i][j]))+",")
 	FILE.write(str(label[i])+"\n")
 
 FILE.close()
