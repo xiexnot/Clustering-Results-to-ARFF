@@ -1,0 +1,6 @@
+{
+	"dataset_filename":"dataset/BL313/s_dataset_Parted",
+	"label_filename":"dataset/BL313/s_dataset_label(manual)",
+	"feature_filename":"dataset/BL313/s_dataset_Parted_feature",
+	"ARFF_filename":"BL313_Parted.arff"
+}
