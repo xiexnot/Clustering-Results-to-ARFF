@@ -1,7 +1,0 @@
-{
-	"dataset_filename":"BL313_ARFF_Adaptation/BL313/s_dataset_Appliance",
-	"label_filename":"BL313_ARFF_Adaptation/BL313/s_dataset_label(manual)",
-	"feature_filename":"BL313_ARFF_Adaptation/BL313/s_dataset_Appliance_feature",
-	"ARFF_filename":"BL313_ARFF_Adaptation/BL313_Appliance_TV.arff",
-	"efficient_label":["WatchingTV"]
-}
