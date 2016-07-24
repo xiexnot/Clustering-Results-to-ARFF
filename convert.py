@@ -13,6 +13,13 @@ def count_individual_label(label):
 	label_count.sort()
 	return label_count
 
+def count_efficient_label(label_count, efficient_label):
+	label_count_arranged = []
+	for i in range(label_count.__len__()):
+		if label_count[i] in efficient_label:
+			label_count_arranged.append(label_count[i])
+	return label_count_arranged
+
 try:
 	decoded = read_json(sys.argv[1])
 except:
@@ -32,7 +39,10 @@ if "clustering_filename" in decoded:
 if "label_filename" in decoded:
 	print "find label..."
 	label = read_annotation(decoded["label_filename"])
+
 label_count = count_individual_label(label)
+if "efficient_label" in decoded:
+	label_count = count_efficient_label(label_count, decoded["efficient_label"])
 
 
 feature = read_feature(decoded["feature_filename"])
@@ -71,6 +81,11 @@ print len(instance[i])
 print len(state)
 
 for i in range(instance.__len__()):
+	# it's an efficient label
+	if label[i] in label_count:
+		pass
+	else:
+		continue
 	for j in range(len(instance[i])):
 		if state[j] == "real":
 			FILE.write(str(round(instance[i][j],1))+",")
